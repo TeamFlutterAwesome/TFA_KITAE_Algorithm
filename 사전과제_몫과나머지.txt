@@ -1,0 +1,12 @@
+import 'dart:io';
+void main() {
+	var input = stdin.readLineSync();
+	List inputValue = input.split(' ').map((e) =>int.parse(e)).toList();
+	
+	var first = inputValue[0];
+	var second = inputValue[1];
+	
+	print('${(first / second).toInt()} ${first % second}');
+	
+	
+}

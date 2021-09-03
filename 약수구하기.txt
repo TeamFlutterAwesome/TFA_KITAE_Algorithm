@@ -1,0 +1,14 @@
+import 'dart:io';
+void main() {
+	// 입력
+	var input = int.parse(stdin.readLineSync());
+	
+	// for > 돌려서 1부터 입력값까지
+	for(int i=1; i<=input; i++){
+		// 입력값에서 순차적으로 몫이 0인것 출력
+		if(input%i == 0){
+			stdout.write(i);
+			stdout.write(' ');
+		}
+	}
+}
