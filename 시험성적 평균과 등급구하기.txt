@@ -1,0 +1,23 @@
+import 'dart:io';
+void main() {
+	List input = stdin.readLineSync().split(' ').map((e) => int.parse(e)).toList();
+	
+	var sum = 0;
+	var avg = '';
+	
+	for(int i=0; i<input.length; i++){
+		sum += input[i];
+	}
+	
+	avg = sum / input.length;
+	
+	avg >= 90 ? 
+		print('${avg.toStringAsFixed(2)} A') : 
+	avg >= 80 ?
+		print('${avg.toStringAsFixed(2)} B') : 
+	avg >= 70 ?
+		print('${avg.toStringAsFixed(2)} C') : 
+	avg >= 60 ?
+		print('${avg.toStringAsFixed(2)} D') : 
+		print('${avg.toStringAsFixed(2)} F');
+}
